@@ -13,9 +13,16 @@ This is a simple API that saves tasks.
 
 [https://app-yjgxdaikrq-uc.a.run.app/api/todo](https://app-yjgxdaikrq-uc.a.run.app/api/todo)
 
-### Requirements
+## Installation/deployment instructions
 
-[NodeJS](https://nodejs.org/en/)
+> **Requirements**: NodeJS `lts/gallium (v.16.20.0)`.
+
+### Using NPM
+
+- Run `npm i` to install the project dependencies
+- Run `npm run deploy` to deploy this stack to AWS
+- Run `Run npm serve` to run the solution locally
+- Run `Run npm test` to test the tasks function locally
 
 You will need a Firebase project and firebase tools cli
 
@@ -26,7 +33,7 @@ npm install -g firebase-tools
 ### Clone this repository
 
 ```
-git clone https://github.com/ivallejo/todo-typescript-api.git .
+git clone https://github.com/ivallejo/todo-typescript-api.git
 ```
 
 You need to change the firebase project name in *.firebaserc* file.
@@ -35,6 +42,7 @@ After that, you can log in to firebase in the terminal
 
 ```
 firebase login
+firebase use "<your project id>"
 ```
 
 
@@ -44,6 +52,7 @@ For the first time, you have deploy the hosting and functions together
 
 ```
 cd functions/
+npm install
 npm run deploy
 ```
 
@@ -54,6 +63,7 @@ In order to test the tasks function locally, run the following command:
 
 ```
 cd functions/
+npm install
 npm run serve
 ```
 
@@ -64,6 +74,7 @@ Run the following command:
 
 ```
 cd functions/
+npm install
 npm run test
 ```
 
